@@ -1,8 +1,21 @@
 import React from 'react';
+import Navigation from './components/Navigation'
+import {Routes, Route} from "react-router-dom"
+import FavoritesPages from './pages/FavoritesPages';
+import HomePage from './pages/HomePage';
 
 function App() {
+
+  
   return (
-   <h1 className='font-bold' >Hello</h1>
+    <>
+    
+    <Navigation />
+    <Routes>
+      <Route path="/" element={<HomePage/>} />
+      <Route path="/" element={<FavoritesPages/>} />
+          </Routes>
+          </>
   );
 }
 
